@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_id": "gcm-sample-1221",
-    "project_number": "793532904128",
-    "name": "gcm-sample"
+    "project_number": "1080858140052",
+    "firebase_url": "https://gcm-sample-79bcf.firebaseio.com",
+    "project_id": "gcm-sample-79bcf",
+    "storage_bucket": "gcm-sample-79bcf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:793532904128:android:08967fcbaf0bf013",
-        "client_id": "android:com.tf.gcmsample",
-        "client_type": 1,
+        "mobilesdk_app_id": "1:1080858140052:android:08967fcbaf0bf013",
         "android_client_info": {
           "package_name": "com.tf.gcmsample"
         }
       },
-      "oauth_client": [],
-      "api_key": [],
+      "oauth_client": [
+        {
+          "client_id": "1080858140052-deadmotrnq01071kl71giv1se7ligakt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw6UKObs0e3lmDyGtHeRnA4MO3ZTjtpTM"
+        }
+      ],
       "services": {
         "analytics_service": {
           "status": 1
-        },
-        "cloud_messaging_service": {
-          "status": 2,
-          "apns_config": []
         },
         "appinvite_service": {
           "status": 1,
           "other_platform_oauth_client": []
         },
-        "google_signin_service": {
-          "status": 1
-        },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }
   ],
-  "client_info": [],
-  "ARTIFACT_VERSION": "1"
+  "configuration_version": "1"
 }
