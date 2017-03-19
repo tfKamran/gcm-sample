@@ -13,7 +13,7 @@ class GCM {
 	 */
 	public function send_notification($registatoin_ids, $message) {
 		// Set POST variables
-		$url = 'https://android.googleapis.com/gcm/send';
+		$url = 'https://fcm.googleapis.com/fcm/send';
 
 		$fields = array(
 			'registration_ids' => $registatoin_ids,
@@ -21,7 +21,7 @@ class GCM {
 		);
 
 		$headers = array(
-			'Authorization: key=' . "AIzaSyCVEebhVdvVW8ggOTkuF2sENb3wXMGfWBQ",
+			'Authorization: key=' . "AAAA-6gqXZQ:APA91bHJ6qqI283ITfkbWnuzVwA6eUUAJh-jde0Y13EZliSo7r9thVD0wn2p4mJt29Ejz0_7pkz1ELZQ_SvGZQGKe2XxmMk7LH27exi2GX9x-MLjivKEsaPaCOTIpMha244DJCYLjw3h",
 			'Content-Type: application/json',
 		);
 		// Open connection
