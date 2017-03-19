@@ -7,7 +7,7 @@ A basic reusable implementation of GCM/FCM push messaging.
 You can test your setup with:
 
     curl -X POST -H "Content-Type: application/json" -d '{
-                "instance_id":"<YOUR_DEVICE_FCM_TOKEN",
+                "instance_id":"<YOUR_DEVICE_FCM_TOKEN>",
                 "message":"Here"
             }' "http://localhost/push.php"
 
