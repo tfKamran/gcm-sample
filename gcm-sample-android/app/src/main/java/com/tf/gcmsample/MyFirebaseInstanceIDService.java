@@ -27,22 +27,28 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
         final String instanceId = FirebaseInstanceId.getInstance().getToken();
 
         if (instanceId != null) {
-            SharedPreferences sharedPreferences = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+            saveToken(instanceId);
 
-            sharedPreferences.edit()
-                    .putString(PREF_INSTANCE_ID, instanceId)
-                    .apply();
-
-            final Handler handler = new Handler(Looper.getMainLooper());
-            handler.post(new Runnable() {
-                @Override
-                public void run() {
-                    for (OnTokenRefreshListener listener : sListeners) {
-                        listener.onTokenRefresh(instanceId);
-                    }
-                }
-            });
+            updateListeners(instanceId);
         }
+    }
+
+    private void saveToken(String instanceId) {
+        getSharedPreferences(getPackageName(), MODE_PRIVATE).edit()
+                .putString(PREF_INSTANCE_ID, instanceId)
+                .apply();
+    }
+
+    private void updateListeners(final String instanceId) {
+        final Handler handler = new Handler(Looper.getMainLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                for (OnTokenRefreshListener listener : sListeners) {
+                    listener.onTokenRefresh(instanceId);
+                }
+            }
+        });
     }
 
     public static void addOnTokenRefreshListener(OnTokenRefreshListener listener) {
